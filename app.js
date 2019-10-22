@@ -1,4 +1,5 @@
 const request = require('request')
+const geocode = require('./utils/geocode')
 
 const url = 'xxxx'
 
@@ -29,4 +30,12 @@ request({ url: geocodeURL, json: true }, (error, response) => {
         console.log(latitude, longitude)
     }
 })
+
+
+
+geocode('New York', (error, data) => {
+    console.log('Error ', error)
+    console.log('Data ', data)
+})
+
 
